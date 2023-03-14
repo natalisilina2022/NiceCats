@@ -1,50 +1,90 @@
+
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Милые котики</title>
-    <script src="https://kit.fontawesome.com/3e2b3d0dcf.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Милые котики</title>
     <script src="scripts/api.js"></script>
 </head>
 
 <body>
     <header>
-        <a href="" class="logo"><i class="fa-solid fa-paw fa-2x"></i> Милые новогодние котики</a>
-        <a class="btn" href="" id="add"><i class="fa-regular fa-plus"></i></a>
+        <a href="" class="logo"><i class="fa-solid fa-paw"></i> Милые новогодние котики</a>
+        <div class="header_container">
+            <a class="btn" href="" id="add"><i class="fa-regular fa-plus"></i></a>
+            <a class="btn enter" href="" id="enter">
+                <span>Войти</span>
+            </a>
+        </div>
     </header>
     <main>
     </main>
     <footer>
-        <span>©2022 Made by Name</span>
+        <span>©2022 Made by Natali Silina</span>
         <nav>
             <a href=""><i class="fa-brands fa-github"></i></a>
             <a href=""><i class="fa-brands fa-vk"></i></a>
             <a href=""><i class="fa-brands fa-telegram"></i></a>
         </nav>
     </footer>
-
+    <div class="authorization-wrapper">
+        <div class="authoriz" id="authoriz-form">
+            <div class="authoriz-close btn"><i class="fa-solid fa-xmark"></i></div>
+            <h2>Авторизация</h2>
+            <form class="authorizForm">
+                <div class="authorizFormValue">
+                    <input id="login" type="text" name="login" placeholder="Введите логин">
+                    <input type="password" name="password" required placeholder="Введите пароль">
+                </div>
+                <button class="acceptEnterBtn" type="submit">Войти</button>
+            </form>
+        </div>
+    </div>
     <div class="popup-wrapper">
         <div class="popup" id="popup-form">
             <div class="popup-close btn"><i class="fa-solid fa-xmark"></i></div>
             <h2>Добавить питомца</h2>
-            <form action="">
+            <form class="add_pet">
                 <div class="form-img"></div>
                 <input type="number" name="id" min="1" required placeholder="id">
                 <input type="number" name="age" placeholder="Возраст">
                 <input type="text" name="name" required placeholder="Имя">
                 <input type="number" name="rate" placeholder="Рейтинг (0-10)" min="0" max="10">
                 <textarea name="description" placeholder="Описание"></textarea>
-                <label>Любимчик <input type="checkbox" name="favourite" placeholder=""></label>
+                <label>Любимчик <input type="checkbox" name="favourite"></label>
                 <input type="text" name="img_link" placeholder="Ссылка на фото">
                 <button type="submit">Добавить котика</button>
             </form>
         </div>
     </div>
+    <div class="detail-info">
+        <div class="det_info" id="det_info-form">
+            <div class="det_info-close btn"><i class="fa-solid fa-xmark"></i></div>
+            <h2>Детальная информация о котике</h2>
+            <form class="show-info">
+                <div class="cat-info"></div>
+                <h2>Изменение информации о котике</h2>
+                <input type="number" name="id" min="1" disabled placeholder=" id">
+                <input type="number" name="age" placeholder="Возраст">
+                <input type="text" name="name" placeholder="Имя">
+                <input type="number" name="rate" placeholder="Рейтинг (0-10)" min="0" max="10">
+                <textarea name="description" placeholder="Описание"></textarea>
+                <label>Любимчик <input type="checkbox" name="favourite"></label>
+                <input type="text" name="img_link" placeholder="Ссылка на фото">
+                <button class="change">Изменить информацию</button>
+                <button class=del>Удалить котика</button>
+            </form>
+        </div>
+    </div>
+    <script src="scripts/index.js"></script>
+    <script src="https://kit.fontawesome.com/d6a1ef88f5.js" crossorigin="anonymous"></script>
 </body>
-
-<script src="scripts/index.js"></script>
 
 </html>

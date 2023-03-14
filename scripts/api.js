@@ -35,6 +35,9 @@ class Api {
   delCat(id) {
     return fetch(`${this.url}${this.name}/delete/${id}`, {
       method: "DELETE",
+      headers: {           //объект с заголовками запроса
+        'Content-Type': 'application/json',
+    }
     });
   }
 }
